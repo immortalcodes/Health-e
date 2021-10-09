@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Symptoms Survey for Elderly Citizens</title>
+	<style type="text/css">
+		input{
+			font-size: 25px;
+			align-content: center;
+		}
+		body{
+			background-image: url(a.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.content{
+			background: white;
+			width: 50%;
+			padding: 40px;
+			margin: 100px auto;
+			font-style: normal;
+		}
+		p{
+			color: black;
+		}
+		.tab{
+			margin-left: 100px;
+		}
+		form{
+			font-size: 25px;
+			color: black;
+			align-content: center;
+			text-align: center;
+		}
+		label{
+			font-size: 25px;
+			align-content: space-around;
+		}
+		table, th, td{
+			border: 3px solid black;
+		}
+	</style>
+	<script src="static/utility.js"></script>
+  </head>
+  <body>
+	<h2 style="text-align: center;font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif;">Symptoms Survey for Elderly Citizens</h2>	
+	<form style="font-size: 25px;color: black;align-content: center;text-align: center;">
+		Name:  &nbsp; <input type="text" name = "name" placeholder="(Eg)Rajesh" size="50" required><br><br>
+		Age:  &nbsp; <input type="text" name = "age" placeholder="(Eg)65" size="50" required><br><br>
+		Height(cm): &nbsp; <input type="text" name = "height" placeholder="(Eg)170" size="50" required><br><br>
+		Weight(Kg):  &nbsp; <input type="text" name = "weight" placeholder="(Eg)75" size="50" required><br><br>
+		Sex(M/F):  &nbsp; <input type="text" name = "sex" placeholder="(Eg)M" size="50" required><br><br>
+		City: &nbsp; <input type="text" name="city" placeholder="(Eg)Bangalore (Only for Tier1 cities doctors will be printed)" size="50"><br><br>
+		<br>
+		Enter Symptom Numbers (seperated by ','):  &nbsp; <input type="text" name = "Input_lis" placeholder="(Eg)3,7,8,11" size="15" required>
+		<input type="button" class="btn btn-sm" onclick="submitData('submitJSON')" value="Submit">	
+	</form>
+	<h2 style="text-align: center;font-size: 33px; margin-left: 00px;">Symptom Table</h2>
+	<p style="font-size: 25px;color: black;align-content: left;text-align: left; margin-left: 200px; margin-right: 50px;">
+		<table style="width: 80%" align="center">
+			<tr>
+				<th>Symptom No.</th>
+				<th>Symptom</th>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">1</td>
+				<td align="center" style="font-size: 25px;">Lack of Exercize in daily routine</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">2</td>
+				<td align="center" style="font-size: 25px;">Drinking of Alcohol</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">3</td>
+				<td align="center" style="font-size: 25px;">Regular Smoking</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">4</td>
+				<td align="center" style="font-size: 25px;">Difficulty in Walking and early Fatigue</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">5</td>
+				<td align="center" style="font-size: 25px;">Problems with mobility in other parts</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">6</td>
+				<td align="center" style="font-size: 25px;">Inflammation, pain, or stiffness in joints of the body</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">7</td>
+				<td align="center" style="font-size: 25px;">Redness around joints</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">8</td>
+				<td align="center" style="font-size: 25px;">Difficult in breathing</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">9</td>
+				<td align="center" style="font-size: 25px;">Pain in chest or discomfort and tightness in chest</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">10</td>
+				<td align="center" style="font-size: 25px;">Pain in upper abdomen</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">11</td>
+				<td align="center" style="font-size: 25px;">Nervousness</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">12</td>
+				<td align="center" style="font-size: 25px;">Dizziness</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">13</td>
+				<td align="center" style="font-size: 25px;">Clouded and blurred vision</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">14</td>
+				<td align="center" style="font-size: 25px;">Yellowish colored vision</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">15</td>
+				<td align="center" style="font-size: 25px;">Double vision</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">16</td>
+				<td align="center" style="font-size: 25px;">Bad vision in night</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">17</td>
+				<td align="center" style="font-size: 25px;">Difficulty in thinking properly</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">18</td>
+				<td align="center" style="font-size: 25px;">Difficulty in expressing yourself</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">19</td>
+				<td align="center" style="font-size: 25px;">Concentration and cognitive problems</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">20</td>
+				<td align="center" style="font-size: 25px;">Ffeeling of Tiredness</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">21</td>
+				<td align="center" style="font-size: 25px;">Unexplained deviation in body weight</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">22</td>
+				<td align="center" style="font-size: 25px;">Sleep disturbances</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">23</td>
+				<td align="center" style="font-size: 25px;">Feelings of sadness , tearfulness, emptiness or hopelessness.</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">24</td>
+				<td align="center" style="font-size: 25px;">Difficulty in healing of wounds</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">25</td>
+				<td align="center" style="font-size: 25px;">Problems in urination system </td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">26</td>
+				<td align="center" style="font-size: 25px;">Sexual problems</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">27</td>
+				<td align="center" style="font-size: 25px;">Always Hungry and Thirsty</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">28</td>
+				<td align="center" style="font-size: 25px;">Social loneliness</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">29</td>
+				<td align="center" style="font-size: 25px;">Loss of some memories</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">30</td>
+				<td align="center" style="font-size: 25px;">Stress</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">31</td>
+				<td align="center" style="font-size: 25px;">Forgetting conversations and events</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">32</td>
+				<td align="center" style="font-size: 25px;">Blood in urine</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">33</td>
+				<td align="center" style="font-size: 25px;">Fits of uneasiness</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">34</td>
+				<td align="center" style="font-size: 25px;">Severe headaches</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">35</td>
+				<td align="center" style="font-size: 25px;">Unusual sweating</td>
+			</tr>
+			<tr>
+				<td align="center" style="font-size: 25px;">36</td>
+				<td align="center" style="font-size: 25px;">Nosebleed</td>
+			</tr>
+		</table>
+	</p>
+	<form><br>
+	<!--<input type="button" class="btn btn-sm" onclick="submitData('submitJSON')" value="Submit">-->
+	<br>
+		IC100 Assignment by Group-15
+		<br><br>
+	<div class="row">
+    			<div class="col-md-8" align="center" style="margin-left: 0px; margin-top: 0.45cm; align-content: center; font-size: 28px;" id="output_div">
+    			</div>
+    	</div>			
+</body>
+</html>
